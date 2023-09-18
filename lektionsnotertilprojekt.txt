@@ -1,0 +1,7 @@
+Specify all words the customer isn't clear about.
+Vi skal lave en kravspecifikation bygget på teksten i opgaven.
+Under 1/3 af et sekund.
+Kun sæt ting på main branch hvis det virker, alle skal have committed, ekstraopgaver skal løses én af gangen. 
+Der er fejl indbygget i opgaven som skal findes.
+
+Vil anbefale at vi gennemanalysere dokument og har alle spørgsmål samlet, så vi kan stille dem.
