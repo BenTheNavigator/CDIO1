@@ -5,3 +5,5 @@ Kun sæt ting på main branch hvis det virker, alle skal have committed, ekstrao
 Der er fejl indbygget i opgaven som skal findes.
 
 Vil anbefale at vi gennemanalysere dokument og har alle spørgsmål samlet, så vi kan stille dem.
+
+Glossary er alle  begreberne som bruges, de skal betyde det samme alle steder.
