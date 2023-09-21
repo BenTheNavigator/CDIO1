@@ -1,1 +1,0 @@
-This is the CDIO1 project repository for group 8.
