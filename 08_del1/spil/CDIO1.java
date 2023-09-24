@@ -17,12 +17,16 @@ class RAFFLEMANIA {
         var player2name = scanner.nextLine();
         System.out.println("May the RAFFLEMANIA be with you " + player2name + "!");
 
+
+
         System.out.println(player1name + ": " + point1);
         System.out.println(player2name + ": " + point2);
         
         
-        System.out.println(Diceroll.diceSum());
-
+        System.out.println( "First die: " + Diceroll.dice1() + "\n" +
+                            "Second die: " + Diceroll.dice2() + "\n" +
+                            "Sum of Dice: " + Diceroll.diceSum());
+        
 
 
 
@@ -33,23 +37,31 @@ class RAFFLEMANIA {
 
 
 class Diceroll{
-    static String diceSum(){
 
+    static int dice1(){
         //We get a random double value (0 to 1) from the Math.random
         var randomValue = Math.random();
-        var randomValue2 = Math.random();
-
         //Here we convert the double value from the Math.random to an integer
-        //and we also have to use Math.floor to round down
+        //and we also have to use Math.floor to round down 
         int dice1 = (int) Math.floor(randomValue*6)+1; 
+        return dice1;
+        }
+
+    static int dice2(){
+        //We get a random double value (0 to 1) from the Math.random
+        var randomValue2 = Math.random();
+        //Here we convert the double value from the Math.random to an integer
+        //and we also have to use Math.floor to round down 
         int dice2 = (int) Math.floor(randomValue2*6)+1; 
+        return dice2;
+    }
+    static int diceSum(){
         //We find the sum, which is the important part
-        int diceSum = dice1+dice2;
+        int diceSum = Diceroll.dice1()+Diceroll.dice2();
         //To check if the dice work
         
-        return  "Result of first die: " + dice1 + "\n" +
-                "Result of second die: " + dice2 + "\n" +
-                "Sum of the dice: " + diceSum;
+        return diceSum;
         } 
     }
+
 }
