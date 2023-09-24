@@ -31,9 +31,9 @@ class RAFFLEMANIA {
             int dicesumresult = dice1result+dice2result;
             System.out.println( "First die: " + dice1result + "\n" +
                                 "Second die: " + dice2result + "\n" + 
-                                "Sum of Dice: " + dicesumresult);
+                                "Sum of Dice: " + dicesumresult + "\n");
             point1+=dicesumresult;
-            
+
             System.out.println(player1name + ": " + point1);
             System.out.println(player2name + ": " + point2 + "\n");
 
