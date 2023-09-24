@@ -1,6 +1,6 @@
 class RAFFLEMANIA {
     public static void main (String args[]){
-        System.out.print("spilbeskrivelse");
+        System.out.println("spilbeskrivelse");
 
         var scanner = new java.util.Scanner(System.in);
         var point1 = 0;
@@ -10,9 +10,12 @@ class RAFFLEMANIA {
         var player1name = scanner.nextLine();
         System.out.println("May the RAFFLEMANIA be with you " + player1name + "!");
 
+        System.out.println("What is player 2's name?");
+        var player2name = scanner.nextLine();
+        System.out.println("May the RAFFLEMANIA be with you " + player2name + "!");
 
-
-
+        System.out.println(player1name + ": " + point1);
+        
 
 
 
