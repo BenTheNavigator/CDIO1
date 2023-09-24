@@ -8,6 +8,7 @@ class RAFFLEMANIA {
         var scanner = new java.util.Scanner(System.in);
         var point1 = 0;
         var point2 = 0;
+        var currentplayer = 1;
 
         System.out.println("What is player 1's name?");
         var player1name = scanner.nextLine();
@@ -23,49 +24,53 @@ class RAFFLEMANIA {
         System.out.println(player2name + ": " + point2 + "\n");
        
         System.out.println("Press 'r' and 'Enter' to roll the dice and start the game");
-        var rollInput = scanner.nextLine(); 
 
-        
-        if(rollInput.equals("r")){
-            int dice1result = Diceroll.dice1();
-            int dice2result = Diceroll.dice2();
-            int dicesumresult = dice1result+dice2result;
-            System.out.println( "First die: " + dice1result + "\n" +
-                                "Second die: " + dice2result + "\n" + 
-                                "Sum of Dice: " + dicesumresult + "\n");
-            point1+=dicesumresult;
+        while (scanner.hasNextLine()){
+            var rollInput = scanner.nextLine(); 
 
-            System.out.println(player1name + ": " + point1);
-            System.out.println(player2name + ": " + point2 + "\n");
 
-            if(dice1result==dice2result){
-                if(dice1result+dice2result==2){
-                    point1=0;
-                    System.out.println(player1name + ": " + point1);
-                    System.out.println(player2name + ": " + point2 + "\n");
-
-                } else {
-                System.out.println("Press 'r' and 'Enter' to roll the dice and start the game");
-                rollInput = scanner.nextLine(); 
-
-                dice1result = Diceroll.dice1();
-                dice2result = Diceroll.dice2();
-                dicesumresult = dice1result+dice2result;
+            if(rollInput.equals("r")){
+                int dice1result = Diceroll.dice1();
+                int dice2result = Diceroll.dice2();
+                int dicesumresult = dice1result+dice2result;
                 System.out.println( "First die: " + dice1result + "\n" +
                                     "Second die: " + dice2result + "\n" + 
                                     "Sum of Dice: " + dicesumresult + "\n");
-                point1+=dicesumresult;
 
+            if(dice1result==dice2result){
+                if (currentplayer==1) {
+                    point1+=dicesumresult;
+                    if(dice1result+dice2result==2){
+                        point1=0;
+                    }
+                }
+                if (currentplayer==2){
+                    point2+=dicesumresult;
+                    if(dice1result+dice2result==2){
+                        point2=0;
+                    }
+                }
+                    System.out.println(player1name + ": " + point1);
+                    System.out.println(player2name + ": " + point2 + "\n"); 
+            }else{
+                 if (currentplayer==1){
+                point1+=dicesumresult;
+                currentplayer=2;
+            }   else{
+                    point2+=dicesumresult;
+                    currentplayer=1;
+                }
+            }
                 System.out.println(player1name + ": " + point1);
                 System.out.println(player2name + ": " + point2 + "\n");
-                }
+            
 
+            
             }
-        scanner.close();
-
         }
+        scanner.close();
     }
-
+}
 
 
 class Diceroll{
@@ -88,4 +93,3 @@ class Diceroll{
         return dice2;
         }
     }
-}
