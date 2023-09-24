@@ -7,6 +7,8 @@ class RAFFLEMANIA {
         var scanner = new java.util.Scanner(System.in);
         var point1 = 0;
         var point2 = 0;
+
+        //Makes player1 start and helps change between the two
         var currentplayer = 1;
 
         System.out.println("\n"+"What is player 1's name?");
@@ -24,10 +26,11 @@ class RAFFLEMANIA {
        
         System.out.println("Press 'r' and 'Enter' to roll the dice and start the game");
 
+        //Basically the game. We put it inside a loop to keep running
         while (scanner.hasNextLine()){
             var rollInput = scanner.nextLine(); 
 
-
+            //If the user enters "r" the game begins and they roll the dice
             if(rollInput.equals("r")){
                 int dice1result = Diceroll.dice1();
                 int dice2result = Diceroll.dice2();
@@ -36,10 +39,12 @@ class RAFFLEMANIA {
                                     "Second die: " + dice2result + "\n" + 
                                     "Sum of Dice: " + dicesumresult + "\n");
 
+            //We need to check if they get an extra turn    
             if(dice1result==dice2result){
                 System.out.println("How lucky! You just got an extra turn!");
                 if (currentplayer==1) {
                     point1+=dicesumresult;
+                    //We need to check if both die show 1, as that will remove all points
                     if(dice1result+dice2result==2){
                         System.out.println("Ouch... I'm sorry " + player1name + " you just lost all your point");
                         point1=0;
@@ -47,6 +52,7 @@ class RAFFLEMANIA {
                 }
                 if (currentplayer==2){
                     point2+=dicesumresult;
+                    //We need to check if both die show 1, as that will remove all points
                     if(dice1result+dice2result==2){
                         System.out.println("Ouch... I'm sorry " + player2name + " you just lost all your point");
                         point2=0;
@@ -54,6 +60,7 @@ class RAFFLEMANIA {
                 }
                 
                     System.out.println("Press 'r' and 'Enter' to roll the dice again");
+            //If the dice arent equal we run the normal program
             }else{
                  if (currentplayer==1){
                     point1+=dicesumresult;
