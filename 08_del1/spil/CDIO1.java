@@ -1,5 +1,3 @@
-import java.lang.Math;
-
 class Diceroll{
     public static void main(String args[]){
 
