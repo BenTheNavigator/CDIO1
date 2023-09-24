@@ -1,7 +1,10 @@
 class RAFFLEMANIA {
     public static void main (String args[]){
-        System.out.println("spilbeskrivelse");
+        System.out.println("spilbeskrivelse"); 
+        // here enter game description
 
+
+        //made scanner and variables for points and names
         var scanner = new java.util.Scanner(System.in);
         var point1 = 0;
         var point2 = 0;
