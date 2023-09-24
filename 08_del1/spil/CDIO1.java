@@ -54,11 +54,13 @@ class RAFFLEMANIA {
                     System.out.println(player2name + ": " + point2 + "\n"); 
             }else{
                  if (currentplayer==1){
-                point1+=dicesumresult;
-                currentplayer=2;
+                    point1+=dicesumresult;
+                    currentplayer=2;
+                    System.out.println("Press 'r' and 'Enter' to roll the dice");
             }   else{
                     point2+=dicesumresult;
                     currentplayer=1;
+                    System.out.println("Press 'r' and 'Enter' to roll the dice");
                 }
             }
                 System.out.println(player1name + ": " + point1);
