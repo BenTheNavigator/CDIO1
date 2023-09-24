@@ -9,7 +9,7 @@ class RAFFLEMANIA {
         var point2 = 0;
         var currentplayer = 1;
 
-        System.out.println("What is player 1's name?");
+        System.out.println("\n"+"What is player 1's name?");
         var player1name = scanner.nextLine();
         System.out.println("May the RAFFLEMANIA be with you " + player1name + "!" + "\n");
 
