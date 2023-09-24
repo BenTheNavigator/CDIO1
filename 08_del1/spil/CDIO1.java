@@ -22,17 +22,21 @@ class RAFFLEMANIA {
         System.out.println(player1name + ": " + point1);
         System.out.println(player2name + ": " + point2 + "\n");
        
-        
-        int dice1result = Diceroll.dice1();
-        int dice2result = Diceroll.dice2();
-        int dicesumresult = dice1result+dice2result;
+        System.out.println("Press 'r' and 'Enter' to roll the dice");
+        var rollInput = scanner.nextLine(); 
 
-        System.out.println("First die: " + dice1result + "\n" +
-                            "Second die: " + dice2result + "\n" + 
-                            "Sum of Dice: " + dicesumresult);
+        if(rollInput.equals("r")){
+            int dice1result = Diceroll.dice1();
+            int dice2result = Diceroll.dice2();
+            int dicesumresult = dice1result+dice2result;
+            System.out.println( "First die: " + dice1result + "\n" +
+                                "Second die: " + dice2result + "\n" + 
+                                "Sum of Dice: " + dicesumresult);
 
-
+            }
         scanner.close();
+
+        }
     }
 
 
@@ -57,5 +61,3 @@ class Diceroll{
         return dice2;
         }
     }
-
-}
