@@ -33,7 +33,7 @@ class RAFFLEMANIA {
 
 
 class Diceroll{
-    static int diceSum(){
+    static String diceSum(){
 
         //We get a random double value (0 to 1) from the Math.random
         var randomValue = Math.random();
@@ -41,13 +41,15 @@ class Diceroll{
 
         //Here we convert the double value from the Math.random to an integer
         //and we also have to use Math.floor to round down
-        int dice = (int) Math.floor(randomValue*6)+1; 
+        int dice1 = (int) Math.floor(randomValue*6)+1; 
         int dice2 = (int) Math.floor(randomValue2*6)+1; 
         //We find the sum, which is the important part
-        int diceSum = dice+dice2;
+        int diceSum = dice1+dice2;
         //To check if the dice work
         
-        return diceSum;
+        return  "Result of first die: " + dice1 + "\n" +
+                "Result of second die: " + dice2 + "\n" +
+                "Sum of the dice: " + diceSum;
         } 
     }
 }
