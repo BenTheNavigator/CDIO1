@@ -22,7 +22,7 @@ class RAFFLEMANIA {
         System.out.println(player1name + ": " + point1);
         System.out.println(player2name + ": " + point2 + "\n");
        
-        System.out.println("Press 'r' and 'Enter' to roll the dice");
+        System.out.println("Press 'r' and 'Enter' to roll the dice and start the game");
         var rollInput = scanner.nextLine(); 
 
         if(rollInput.equals("r")){
@@ -32,6 +32,10 @@ class RAFFLEMANIA {
             System.out.println( "First die: " + dice1result + "\n" +
                                 "Second die: " + dice2result + "\n" + 
                                 "Sum of Dice: " + dicesumresult);
+            point1+=dicesumresult;
+            
+            System.out.println(player1name + ": " + point1);
+            System.out.println(player2name + ": " + point2 + "\n");
 
             }
         scanner.close();
