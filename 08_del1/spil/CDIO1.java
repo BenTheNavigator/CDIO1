@@ -11,17 +11,17 @@ class RAFFLEMANIA {
 
         System.out.println("What is player 1's name?");
         var player1name = scanner.nextLine();
-        System.out.println("May the RAFFLEMANIA be with you " + player1name + "!");
+        System.out.println("May the RAFFLEMANIA be with you " + player1name + "!" + "\n");
 
         System.out.println("What is player 2's name?");
         var player2name = scanner.nextLine();
-        System.out.println("May the RAFFLEMANIA be with you " + player2name + "!");
+        System.out.println("May the RAFFLEMANIA be with you " + player2name + "!" + "\n");
 
 
 
         System.out.println(player1name + ": " + point1);
-        System.out.println(player2name + ": " + point2);
-        
+        System.out.println(player2name + ": " + point2 + "\n");
+       
         
         int dice1result = Diceroll.dice1();
         int dice2result = Diceroll.dice2();
