@@ -23,12 +23,13 @@ class RAFFLEMANIA {
         System.out.println(player2name + ": " + point2);
         
         
-        System.out.println( "First die: " + Diceroll.dice1() + "\n" +
-                            "Second die: " + Diceroll.dice2() + "\n" +
-                            "Sum of Dice: " + Diceroll.diceSum());
-        
+        int dice1result = Diceroll.dice1();
+        int dice2result = Diceroll.dice2();
+        int dicesumresult = dice1result+dice2result;
 
-
+        System.out.println("First die: " + dice1result + "\n" +
+                            "Second die: " + dice2result + "\n" + 
+                            "Sum of Dice: " + dicesumresult);
 
 
         scanner.close();
@@ -54,14 +55,7 @@ class Diceroll{
         //and we also have to use Math.floor to round down 
         int dice2 = (int) Math.floor(randomValue2*6)+1; 
         return dice2;
-    }
-    static int diceSum(){
-        //We find the sum, which is the important part
-        int diceSum = Diceroll.dice1()+Diceroll.dice2();
-        //To check if the dice work
-        
-        return diceSum;
-        } 
+        }
     }
 
 }
