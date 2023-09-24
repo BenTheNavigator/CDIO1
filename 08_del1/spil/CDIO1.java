@@ -38,25 +38,29 @@ class RAFFLEMANIA {
                                     "Sum of Dice: " + dicesumresult + "\n");
 
             if(dice1result==dice2result){
+                System.out.println("How lucky! You just got an extra turn!");
                 if (currentplayer==1) {
                     point1+=dicesumresult;
                     if(dice1result+dice2result==2){
+                        System.out.println("Ouch... I'm sorry " + player1name + " you just lost all your point");
                         point1=0;
                     }
                 }
                 if (currentplayer==2){
                     point2+=dicesumresult;
                     if(dice1result+dice2result==2){
+                        System.out.println("Ouch... I'm sorry " + player2name + " you just lost all your point");
                         point2=0;
                     }
                 }
-                    System.out.println(player1name + ": " + point1);
-                    System.out.println(player2name + ": " + point2 + "\n"); 
+                
+                    System.out.println("Press 'r' and 'Enter' to roll the dice again");
             }else{
                  if (currentplayer==1){
                     point1+=dicesumresult;
                     currentplayer=2;
                     System.out.println("Press 'r' and 'Enter' to roll the dice");
+
             }   else{
                     point2+=dicesumresult;
                     currentplayer=1;
