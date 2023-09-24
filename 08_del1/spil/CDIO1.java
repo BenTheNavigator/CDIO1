@@ -18,7 +18,7 @@ class RAFFLEMANIA {
         System.out.println("May the RAFFLEMANIA be with you " + player2name + "!");
 
         System.out.println(player1name + ": " + point1);
-        
+        System.out.println(player2name + ": " + point2);
         
         
         System.out.println(Diceroll.diceSum());
