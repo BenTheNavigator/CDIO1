@@ -63,7 +63,10 @@ class RAFFLEMANIA {
                             System.out.println("CONGRATS " + player1name + " you just won the game");
                             break;
                         } else {
+                            point1+=dicesumresult;
                             xtrawinp1 = 1;
+                            System.out.println("How lucky! You just got an extra turn!");
+                            System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                         }
 
                     } else {
@@ -88,7 +91,10 @@ class RAFFLEMANIA {
                             System.out.println("CONGRATS " + player2name + " you just won the game");
                             break;
                         } else {
+                            point2+=dicesumresult;
                             xtrawinp2 = 1;
+                            System.out.println("How lucky! You just got an extra turn!");
+                            System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                         }
 
                     }else {
