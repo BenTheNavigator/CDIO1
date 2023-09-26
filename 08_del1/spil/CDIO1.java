@@ -39,24 +39,35 @@ class RAFFLEMANIA {
                                     "Second die: " + dice2result + "\n" + 
                                     "Sum of Dice: " + dicesumresult + "\n");
 
-            //We need to check if they get an extra turn    
+            //We need to check if they get an extra turn
             if(dice1result==dice2result){
                 System.out.println("How lucky! You just got an extra turn!");
                 if (currentplayer==1) {
-                    point1+=dicesumresult;
                     //We need to check if both die show 1, as that will remove all points
+
                     if(dice1result+dice2result==2){
-                        System.out.println("Ouch... I'm sorry " + player1name + " you just lost all your point");
+                        System.out.println("Ouch... I'm sorry " + player1name + " but you also just lost all your point");
                         point1=0;
+                    }
+                    if(point1>=40){
+                        System.out.println("CONGRATS " + player1name + " you just won the game");
+                        break;
+                    }else {
+                        point1+=dicesumresult;
                     }
                 }
                 if (currentplayer==2){
-                    point2+=dicesumresult;
-                    //We need to check if both die show 1, as that will remove all points
+
                     if(dice1result+dice2result==2){
-                        System.out.println("Ouch... I'm sorry " + player2name + " you just lost all your point");
+                        System.out.println("Ouch... I'm sorry " + player2name + "but you also just lost all your point");
                         point2=0;
                     }
+                    if(point2>=40){
+                        System.out.println("CONGRATS " + player2name + " you just won the game");
+                        break;
+                    }else {
+                    point2+=dicesumresult;
+                    }      
                 }
                 
                     System.out.println("Press 'r' and 'Enter' to roll the dice again");
