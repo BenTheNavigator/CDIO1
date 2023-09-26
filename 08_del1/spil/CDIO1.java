@@ -32,8 +32,8 @@ class RAFFLEMANIA {
 
             //If the user enters "r" the game begins and they roll the dice
             if(rollInput.equals("r")){
-                int dice1result = Diceroll.dice1();
-                int dice2result = Diceroll.dice2();
+                int dice1result = Diceroll.dice();
+                int dice2result = Diceroll.dice();
                 int dicesumresult = dice1result+dice2result;
                 System.out.println( "First die: " + dice1result + "\n" +
                                     "Second die: " + dice2result + "\n" + 
@@ -105,21 +105,12 @@ class RAFFLEMANIA {
 
 class Diceroll{
 
-    static int dice1(){
+    static int dice(){
         //We get a random double value (0 to 1) from the Math.random
         var randomValue = Math.random();
         //Here we convert the double value from the Math.random to an integer
         //and we also have to use Math.floor to round down 
-        int dice1 = (int) Math.floor(randomValue*6)+1; 
-        return dice1;
-    }
-
-    static int dice2(){
-        //We get a random double value (0 to 1) from the Math.random
-        var randomValue2 = Math.random();
-        //Here we convert the double value from the Math.random to an integer
-        //and we also have to use Math.floor to round down 
-        int dice2 = (int) Math.floor(randomValue2*6)+1; 
-        return dice2;
+        int dice = (int) Math.floor(randomValue*6)+1; 
+        return dice;
     }
 }
