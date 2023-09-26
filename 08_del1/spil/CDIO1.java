@@ -45,7 +45,7 @@ class RAFFLEMANIA {
                     //We need to check if both die show 1, as that will remove all points
 
                     if(dice1result+dice2result==2){
-                        System.out.println("Ouch... I'm sorry " + player1name + " but you also just lost all your point");
+                        System.out.println("Ouch... I'm sorry " + player1name + " but you just lost all your point");
                         point1=0;
                         System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                     }
@@ -62,7 +62,7 @@ class RAFFLEMANIA {
                 if (currentplayer==2){
 
                     if(dice1result+dice2result==2){
-                        System.out.println("Ouch... I'm sorry " + player2name + "but you also just lost all your point");
+                        System.out.println("Ouch... I'm sorry " + player2name + " but you just lost all your point");
                         point2=0;
                         System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                     }
