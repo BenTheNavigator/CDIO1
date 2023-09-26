@@ -11,6 +11,10 @@ class RAFFLEMANIA {
         //Makes player1 start and helps change between the two
         var currentplayer = 1;
 
+        //extra wincondition counter when getting double 6 for each player
+        var xtrawinp1 = 0;
+        var xtrawinp2 = 0;
+
         System.out.println("\n"+"What is player 1's name?");
         var player1name = scanner.nextLine();
         System.out.println("May the RAFFLEMANIA be with you " + player1name + "!" + "\n");
@@ -52,7 +56,17 @@ class RAFFLEMANIA {
                     if(point1>=40){
                         System.out.println("CONGRATS " + player1name + " you just won the game");
                         break;
-                    }else {
+                    } 
+                    
+                    if(dicesumresult == 12) {
+                        if(xtrawinp1 == 1){
+                            System.out.println("CONGRATS " + player1name + " you just won the game");
+                            break;
+                        } else {
+                            xtrawinp1 = 1;
+                        }
+
+                    } else {
                         point1+=dicesumresult;
                         System.out.println("How lucky! You just got an extra turn!");
                         System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
@@ -69,6 +83,14 @@ class RAFFLEMANIA {
                     if(point2>=40){
                         System.out.println("CONGRATS " + player2name + " you just won the game");
                         break;
+                    }if(dicesumresult == 12) {
+                        if(xtrawinp2 == 1){
+                            System.out.println("CONGRATS " + player2name + " you just won the game");
+                            break;
+                        } else {
+                            xtrawinp2 = 1;
+                        }
+
                     }else {
                         point2+=dicesumresult;
                         System.out.println("How lucky! You just got an extra turn!");
@@ -80,12 +102,14 @@ class RAFFLEMANIA {
             }else{
                  if (currentplayer==1){
                     point1+=dicesumresult;
+                    xtrawinp1 = 0;
                     currentplayer=2;
                     System.out.println("Press 'r' and 'Enter' to roll the dice" + "\n");
                     System.out.println("The turn goes to: " + player2name + "\n");
 
             }   else{
                     point2+=dicesumresult;
+                    xtrawinp2 = 0;
                     currentplayer=1;
                     System.out.println("Press 'r' and 'Enter' to roll the dice" + "\n");
                     System.out.println("The turn goes to: " + player1name + "\n");
