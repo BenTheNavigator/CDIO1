@@ -41,47 +41,54 @@ class RAFFLEMANIA {
 
             //We need to check if they get an extra turn
             if(dice1result==dice2result){
-                System.out.println("How lucky! You just got an extra turn!");
                 if (currentplayer==1) {
                     //We need to check if both die show 1, as that will remove all points
 
                     if(dice1result+dice2result==2){
                         System.out.println("Ouch... I'm sorry " + player1name + " but you also just lost all your point");
                         point1=0;
+                        System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                     }
                     if(point1>=40){
                         System.out.println("CONGRATS " + player1name + " you just won the game");
                         break;
                     }else {
                         point1+=dicesumresult;
+                        System.out.println("How lucky! You just got an extra turn!");
+                        System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                     }
+                    System.out.println("The turn stays with: " + player1name + "\n");
                 }
                 if (currentplayer==2){
 
                     if(dice1result+dice2result==2){
                         System.out.println("Ouch... I'm sorry " + player2name + "but you also just lost all your point");
                         point2=0;
+                        System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                     }
                     if(point2>=40){
                         System.out.println("CONGRATS " + player2name + " you just won the game");
                         break;
                     }else {
-                    point2+=dicesumresult;
+                        point2+=dicesumresult;
+                        System.out.println("How lucky! You just got an extra turn!");
+                        System.out.println("Press 'r' and 'Enter' to roll the dice again" + "\n");
                     }      
+                    System.out.println("The turn stays with: " + player2name + "\n");
                 }
-                
-                    System.out.println("Press 'r' and 'Enter' to roll the dice again");
             //If the dice arent equal we run the normal program
             }else{
                  if (currentplayer==1){
                     point1+=dicesumresult;
                     currentplayer=2;
-                    System.out.println("Press 'r' and 'Enter' to roll the dice");
+                    System.out.println("Press 'r' and 'Enter' to roll the dice" + "\n");
+                    System.out.println("The turn goes to: " + player2name + "\n");
 
             }   else{
                     point2+=dicesumresult;
                     currentplayer=1;
-                    System.out.println("Press 'r' and 'Enter' to roll the dice");
+                    System.out.println("Press 'r' and 'Enter' to roll the dice" + "\n");
+                    System.out.println("The turn goes to: " + player1name + "\n");
                 }
             }
                 System.out.println(player1name + ": " + point1);
