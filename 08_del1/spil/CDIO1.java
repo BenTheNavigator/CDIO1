@@ -112,7 +112,7 @@ class Diceroll{
         //and we also have to use Math.floor to round down 
         int dice1 = (int) Math.floor(randomValue*6)+1; 
         return dice1;
-        }
+    }
 
     static int dice2(){
         //We get a random double value (0 to 1) from the Math.random
@@ -121,5 +121,5 @@ class Diceroll{
         //and we also have to use Math.floor to round down 
         int dice2 = (int) Math.floor(randomValue2*6)+1; 
         return dice2;
-        }
     }
+}
